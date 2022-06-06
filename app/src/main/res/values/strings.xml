@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">GitHub User</string>
+    <string name="avatar">Avatar</string>
+    <string name="name">Nama</string>
+    <string name="username">Username</string>
+
+    <string-array name="data_name">
+        <item>Rania Zahara</item>
+    </string-array>
+
+    <string-array name="username">
+        <item>mooncalyptus</item>
+    </string-array>
+
+    <string-array name="location">
+        <item>Indonesia</item>
+    </string-array>
+
+    <string-array name="repository">
+        <item>https://github.com/mooncalyptus/tes_data</item>
+    </string-array>
+
+    <string-array name="avatar">
+        <item>https://avatars.githubusercontent.com/u/61317162?v=4</item>
+    </string-array>
+</resources>
