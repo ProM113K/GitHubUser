@@ -8,6 +8,8 @@ import com.example.githubuser.databinding.ItemListUserBinding
 
 class UserAdapter(private val listUser: ArrayList<User>) :
     RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+    private lateinit var onItemClickCallback: OnItemClickCallback
+
     class UserViewHolder(var binding: ItemListUserBinding) :
         RecyclerView.ViewHolder(binding.root) {}
 
@@ -15,6 +17,14 @@ class UserAdapter(private val listUser: ArrayList<User>) :
         val binding =
             ItemListUserBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return UserViewHolder(binding)
+    }
+
+    fun setOnItemClickCallback(onItemClickCallback: OnItemClickCallback) {
+        this.onItemClickCallback = onItemClickCallback
+    }
+
+    interface OnItemClickCallback {
+        fun onItemClicked(data: User)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
@@ -25,6 +35,8 @@ class UserAdapter(private val listUser: ArrayList<User>) :
             .load(user.imgAvatar)
             .circleCrop()
             .into(holder.binding.rvAvatar)
+
+        holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listUser[holder.adapterPosition]) }
     }
 
     override fun getItemCount(): Int {

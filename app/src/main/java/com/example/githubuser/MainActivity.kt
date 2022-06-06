@@ -1,5 +1,6 @@
 package com.example.githubuser
 
+import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -57,5 +58,16 @@ class MainActivity : AppCompatActivity() {
         } else {
             binding.rvGithub.layoutManager = LinearLayoutManager(this@MainActivity)
         }
+
+        listUserAdapter.setOnItemClickCallback(object : UserAdapter.OnItemClickCallback {
+            override fun onItemClicked(data: User) {
+                showSelectedUser(data)
+            }
+        })
+    }
+
+    private fun showSelectedUser(data: User) {
+        val detail = Intent(this@MainActivity, UserDetailActivity::class.java)
+        startActivity(detail)
     }
 }

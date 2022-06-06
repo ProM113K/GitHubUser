@@ -3,6 +3,7 @@
     <string name="avatar">Avatar</string>
     <string name="name">Nama</string>
     <string name="username">Username</string>
+    <string name="splash_slogan">Where the world builds software</string>
 
     <string-array name="data_name">
         <item>Rania Zahara</item>
@@ -20,8 +21,8 @@
     </string-array>
 
     <string-array name="repository">
-        <item>https://github.com/mooncalyptus/tes_data</item>
-        <item>https://github.com/ProM113K/GitHubUser</item>
+        <item>https://github.com/mooncalyptus</item>
+        <item>https://github.com/ProM113K</item>
     </string-array>
 
     <string-array name="avatar">
