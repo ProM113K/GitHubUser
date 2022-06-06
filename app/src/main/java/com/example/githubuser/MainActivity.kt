@@ -1,10 +1,9 @@
 package com.example.githubuser
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.LayoutInflater
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.example.githubuser.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -20,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         binding.rvGithub.setHasFixedSize(true)
 
         list.addAll(listUsers)
+        showRecyclerGithubUser()
     }
 
     private val listUsers: ArrayList<User>
