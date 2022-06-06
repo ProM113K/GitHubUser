@@ -6,21 +6,26 @@
 
     <string-array name="data_name">
         <item>Rania Zahara</item>
+        <item>Dimas Putra Widiyanto</item>
     </string-array>
 
     <string-array name="username">
         <item>mooncalyptus</item>
+        <item>ProM113K</item>
     </string-array>
 
     <string-array name="location">
+        <item>Indonesia</item>
         <item>Indonesia</item>
     </string-array>
 
     <string-array name="repository">
         <item>https://github.com/mooncalyptus/tes_data</item>
+        <item>https://github.com/ProM113K/GitHubUser</item>
     </string-array>
 
     <string-array name="avatar">
         <item>https://avatars.githubusercontent.com/u/61317162?v=4</item>
+        <item>https://avatars.githubusercontent.com/u/52367793?v=4</item>
     </string-array>
 </resources>

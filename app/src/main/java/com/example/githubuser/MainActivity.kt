@@ -1,9 +1,11 @@
 package com.example.githubuser
 
+import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githubuser.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
@@ -46,8 +48,14 @@ class MainActivity : AppCompatActivity() {
         }
 
     private fun showRecyclerGithubUser() {
-        binding.rvGithub.layoutManager = GridLayoutManager(this@MainActivity, 2)
+        binding.rvGithub.layoutManager = LinearLayoutManager(this@MainActivity)
         val listUserAdapter = UserAdapter(list)
         binding.rvGithub.adapter = listUserAdapter
+
+        if (applicationContext.resources.configuration.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            binding.rvGithub.layoutManager = GridLayoutManager(this@MainActivity, 2)
+        } else {
+            binding.rvGithub.layoutManager = LinearLayoutManager(this@MainActivity)
+        }
     }
 }
