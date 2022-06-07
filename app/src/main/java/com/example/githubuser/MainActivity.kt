@@ -4,10 +4,12 @@ import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
 import android.view.LayoutInflater
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.githubuser.databinding.ActivityMainBinding
+import kotlin.reflect.typeOf
 
 class MainActivity : AppCompatActivity() {
 
@@ -68,6 +70,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun showSelectedUser(data: User) {
         val detail = Intent(this@MainActivity, UserDetailActivity::class.java)
+        detail.putExtra(UserDetailActivity.EXTRA_DATA, data)
         startActivity(detail)
     }
 }

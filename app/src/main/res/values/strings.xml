@@ -4,29 +4,71 @@
     <string name="name">Nama</string>
     <string name="username">Username</string>
     <string name="splash_slogan">Where the world builds software</string>
+    <string name="repository">Repository</string>
+    <string name="location">Location</string>
 
     <string-array name="data_name">
         <item>Rania Zahara</item>
         <item>Dimas Putra Widiyanto</item>
+        <item>Dicoding Academy</item>
+        <item>Henning Dodenhof</item>
+        <item>Bump Technologies</item>
+        <item>Alibaba Open Source</item>
+        <item>TinyGo</item>
+        <item>Casey Rodarmor</item>
+        <item>Stefan Prodan</item>
+        <item>Diego Muracciole</item>
     </string-array>
 
     <string-array name="username">
         <item>mooncalyptus</item>
         <item>ProM113K</item>
+        <item>dicodingacademy</item>
+        <item>hdodenhof</item>
+        <item>bumptech</item>
+        <item>alibaba</item>
+        <item>tinygo-org</item>
+        <item>casey</item>
+        <item>stefanprodan</item>
+        <item>diegomura</item>
     </string-array>
 
     <string-array name="location">
         <item>Indonesia</item>
         <item>Indonesia</item>
+        <item>Indonesia</item>
+        <item>Germany</item>
+        <item>California</item>
+        <item>China</item>
+        <item>USA</item>
+        <item>California</item>
+        <item>Bucharest</item>
+        <item>Uruguay</item>
     </string-array>
 
     <string-array name="repository">
         <item>https://github.com/mooncalyptus</item>
         <item>https://github.com/ProM113K</item>
+        <item>https://github.com/dicodingacademy</item>
+        <item>https://github.com/hdodenhof</item>
+        <item>https://github.com/bumptech</item>
+        <item>https://github.com/alibaba</item>
+        <item>https://github.com/tinygo-org</item>
+        <item>https://github.com/casey</item>
+        <item>https://github.com/stefanprodan</item>
+        <item>https://github.com/diegomura</item>
     </string-array>
 
     <string-array name="avatar">
         <item>https://avatars.githubusercontent.com/u/61317162?v=4</item>
         <item>https://avatars.githubusercontent.com/u/52367793?v=4</item>
+        <item>https://avatars.githubusercontent.com/u/22091590?s=200&amp;v=4</item>
+        <item>https://avatars.githubusercontent.com/u/1824223?v=4</item>
+        <item>https://avatars.githubusercontent.com/u/423539?s=200&amp;v=4</item>
+        <item>https://avatars.githubusercontent.com/u/1961952?s=200&amp;v=4</item>
+        <item>https://avatars.githubusercontent.com/u/45223613?s=200&amp;v=4</item>
+        <item>https://avatars.githubusercontent.com/u/1945?v=4</item>
+        <item>https://avatars.githubusercontent.com/u/3797675?v=4</item>
+        <item>https://avatars.githubusercontent.com/u/5600341?v=4</item>
     </string-array>
 </resources>
