@@ -10,10 +10,6 @@ class UserDetailActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityUserDetailBinding
 
-    companion object {
-        const val EXTRA_DATA = "extra_data"
-    }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityUserDetailBinding.inflate(LayoutInflater.from(this@UserDetailActivity))
@@ -28,5 +24,9 @@ class UserDetailActivity : AppCompatActivity() {
             .load(githubUser.imgAvatar)
             .circleCrop()
             .into(binding.imgAvatar)
+    }
+
+    companion object {
+        const val EXTRA_DATA = "extra_data"
     }
 }

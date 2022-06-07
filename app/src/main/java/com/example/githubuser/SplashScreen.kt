@@ -20,6 +20,10 @@ class SplashScreen : AppCompatActivity() {
             val splash = Intent(this@SplashScreen, MainActivity::class.java)
             startActivity(splash)
             finish()
-        }, 3000)
+        }, SPLASH_DURATION)
+    }
+
+    companion object {
+        private const val SPLASH_DURATION = 3000L
     }
 }

@@ -6,6 +6,7 @@
     <string name="splash_slogan">Where the world builds software</string>
     <string name="repository">Repository</string>
     <string name="location">Location</string>
+    <string name="splash_image">Splash Image</string>
 
     <string-array name="data_name">
         <item>Rania Zahara</item>
