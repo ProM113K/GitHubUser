@@ -16,7 +16,7 @@
         android:theme="@style/Theme.GitHubUser"
         tools:targetApi="31">
         <activity
-            android:name=".SplashScreen"
+            android:name=".ui.SplashScreen"
             android:exported="true"
             android:theme="@style/Theme.Design.Light.NoActionBar">
             <intent-filter>
@@ -26,10 +26,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".UserDetailActivity"
+            android:name=".ui.UserDetailActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".ui.MainActivity"
             android:exported="true" />
 
         <meta-data

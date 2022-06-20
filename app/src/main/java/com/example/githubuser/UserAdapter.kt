@@ -4,14 +4,21 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.example.githubuser.databinding.ItemListUserBinding
 
-class UserAdapter(private val listUser: ArrayList<User>) :
-    RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
+class UserAdapter : RecyclerView.Adapter<UserAdapter.UserViewHolder>() {
     private lateinit var onItemClickCallback: OnItemClickCallback
+    private val listUser = ArrayList<ItemsItem>()
 
-    class UserViewHolder(var binding: ItemListUserBinding) :
-        RecyclerView.ViewHolder(binding.root) {}
+    fun setList(user: ArrayList<ItemsItem>) {
+        listUser.clear()
+        listUser.addAll(user)
+        notifyDataSetChanged()
+    }
+
+    inner class UserViewHolder(var binding: ItemListUserBinding) :
+        RecyclerView.ViewHolder(binding.root)
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): UserViewHolder {
         val binding =
@@ -24,16 +31,16 @@ class UserAdapter(private val listUser: ArrayList<User>) :
     }
 
     interface OnItemClickCallback {
-        fun onItemClicked(data: User)
+        fun onItemClicked(data: ItemsItem)
     }
 
     override fun onBindViewHolder(holder: UserViewHolder, position: Int) {
         val user = listUser[position]
-        holder.binding.rvName.text = user.name
-        holder.binding.rvUsername.text = user.username
+        holder.binding.rvName.text = user.login
         Glide.with(holder.itemView.context)
-            .load(user.imgAvatar)
-            .circleCrop()
+            .load(user.avatarUrl)
+            .centerCrop()
+            .transition(DrawableTransitionOptions.withCrossFade())
             .into(holder.binding.rvAvatar)
 
         holder.itemView.setOnClickListener { onItemClickCallback.onItemClicked(listUser[holder.adapterPosition]) }
